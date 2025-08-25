@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IGUAZU FALLS ADVENTURE — IGUAZÚ FALLS ESSENTIALS</title>
+  <meta name="description" content="Serious, curated travel hub for Iguazú Falls: eSIM, airport transfers, top tours (Gran Aventura, Moonlight), and travel insurance. Book via trusted partners." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="IGUAZU FALLS ADVENTURE — IGUAZÚ FALLS ESSENTIALS" />
+  <meta property="og:description" content="Everything you need for Iguazú in one place. Trusted partners. Serious service." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: reemplazar con tu dominio real de GitHub Pages -->
+  <link rel="canonical" href="https://YOUR-USER.github.io/YOUR-REPO/">
+  <meta property="og:url" content="https://YOUR-USER.github.io/YOUR-REPO/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="img-iguazu-hero-1.jpg" />
+  <meta property="og:image:width" content="1664" />
+  <meta property="og:image:height" content="936" />
+  <meta name="theme-color" content="#059669" />
+
+  <!-- Performance: preloads para el hero -->
+  <link rel="preload" as="image" href="img-iguazu-hero-1.jpg">
+  <link rel="preload" as="image" href="img-iguazu-hero-2.jpg">
+  <link rel="preload" as="image" href="img-iguazu-hero-3.jpg">
+
+  <!-- Favicon genérico -->
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --hero-1: url('img-iguazu-hero-1.jpg');
+      --hero-2: url('img-iguazu-hero-2.jpg');
+      --hero-3: url('img-iguazu-hero-3.jpg');
+    }
+    /* Headings: Anton + Uppercase + Bold */
+    h1, h2, h3, h4, h5, h6, .heading {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 900 !important;
+    }
+    /* Smooth fade for carousel */
+    .slide { opacity: 0; transition: opacity 900ms ease; }
+    .slide.active { opacity: 1; }
+    /* Ensure images cover nicely */
+    .hero-img { background-size: cover; background-position: center; background-repeat: no-repeat; }
+    /* Subtle text legibility without killing the photo */
+    .text-shadow { text-shadow: 0 1px 12px rgba(0,0,0,.35), 0 2px 30px rgba(0,0,0,.35); }
+    /* Header blend over hero; becomes solid on scroll */
+    header.site-header { position: fixed; inset: 0 auto auto 0; width: 100%; z-index: 50; transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
+    header.site-header.transparent { background-color: transparent; border-bottom-color: transparent; }
+    header.site-header.solid { background-color: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(15,23,42,.1); }
+    body { font-family: Arial, Helvetica, sans-serif; }
+  </style>
+</head>
+<body>
+  <!-- Header (blends into hero) -->
+  <header class="site-header transparent" id="siteHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="heading text-xl tracking-wide text-white drop-shadow">Iguazu Falls Adventure</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="#build" class="text-white hover:opacity-90">Build Your Trip</a>
+        <a href="#tours" class="text-white hover:opacity-90">Top Tours</a>
+        <a href="#transfers" class="text-white hover:opacity-90">Transfers</a>
+        <a href="#connect" class="text-white hover:opacity-90">eSIM & Insurance</a>
+        <a href="#faq" class="text-white hover:opacity-90">FAQ</a>
+        <a href="#contact" class="px-3 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700">WhatsApp</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-white/60 text-white" aria-label="Open menu">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/20 bg-black/40 backdrop-blur">
+      <nav class="max-w-7xl mx-auto px-4 py-3 grid gap-2 text-sm font-semibold">
+        <a href="#build" class="py-2 text-white">Build Your Trip</a>
+        <a href="#tours" class="py-2 text-white">Top Tours</a>
+        <a href="#transfers" class="py-2 text-white">Transfers</a>
+        <a href="#connect" class="py-2 text-white">eSIM & Insurance</a>
+        <a href="#faq" class="py-2 text-white">FAQ</a>
+        <a href="#contact" class="py-2 text-white">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO Carousel (full viewport, minimal overlay, 3 slides) -->
+  <section id="home" class="relative min-h-screen" aria-label="Hero">
+    <!-- Slides -->
+    <div class="absolute inset-0">
+      <!-- Slide 1 -->
+      <div class="slide hero-img absolute inset-0 active" style="background-image: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.15)), var(--hero-1);"></div>
+      <!-- Slide 2 -->
+      <div class="slide hero-img absolute inset-0" style="background-image: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.15)), var(--hero-2);"></div>
+      <!-- Slide 3 -->
+      <div class="slide hero-img absolute inset-0" style="background-image: linear-gradient(to top, rgba(0,0,0,0.25), rgba(0,0,0,0.15)), var(--hero-3);"></div>
+    </div>
+
+    <!-- Minimal copy overlay (cornered so it doesn't block the view) -->
+    <div class="relative z-10 h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-full flex items-end pb-16">
+        <div class="max-w-3xl">
+          <p class="text-white/90 text-xs tracking-widest mb-2 font-semibold">ARGENTINA • IGUAZÚ FALLS</p>
+          <h1 id="heroPhrase" class="text-white text-shadow heading text-4xl sm:text-5xl md:text-6xl leading-[1.02]">This isn’t a picture… it’s a dream waiting for you.</h1>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#build" class="px-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Start Planning</a>
+            <a href="#tours" class="px-5 py-3 rounded-xl bg-white/90 text-slate-900 font-semibold border border-slate-200 hover:bg-white">See Top Tours</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicators (bottom-right) -->
+    <div class="absolute bottom-6 right-6 z-10 flex gap-2" aria-label="Slide indicators">
+      <button class="w-2.5 h-2.5 rounded-full bg-white/70" data-dot="0" aria-label="Slide 1" aria-current="true"></button>
+      <button class="w-2.5 h-2.5 rounded-full bg-white/40" data-dot="1" aria-label="Slide 2"></button>
+      <button class="w-2.5 h-2.5 rounded-full bg-white/40" data-dot="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="py-6 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-600">
+      <div class="flex items-center gap-2"><span>🛡️</span><span>Secure payments on partner sites</span></div>
+      <div class="flex items-center gap-2"><span>📱</span><span>Mobile tickets • Free cancellation (per partner)</span></div>
+      <div class="flex items-center gap-2"><span>🌐</span><span>English • USD</span></div>
+      <div class="flex items-center gap-2"><span>🕑</span><span>Fast WhatsApp support</span></div>
+    </div>
+  </section>
+
+  <!-- BUILD YOUR TRIP (Step cards) -->
+  <section id="build" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="heading text-3xl sm:text-4xl">Build Your Trip</h2>
+      <p class="mt-3 text-slate-600">Serious service, curated by locals. You book safely with our partners — we guide you.</p>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="heading text-xl">1 • eSIM</h3>
+          <p class="mt-2 text-slate-600">Stay connected from landing. Instant QR activation.</p>
+          <a href="#ESIM_LINK_1" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Buy eSIM</a>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="heading text-xl">2 • Transfers</h3>
+          <p class="mt-2 text-slate-600">Airport ⇄ Hotel (AR/BR). Meet & greet. Mobile ticket.</p>
+          <a href="#VIATOR_TRANSFER_WIDGET" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">See options</a>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="heading text-xl">3 • Top Tours</h3>
+          <p class="mt-2 text-slate-600">Gran Aventura, Moonlight, Brazilian & Argentine sides.</p>
+          <a href="#tours" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Explore tours</a>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="heading text-xl">4 • Insurance</h3>
+          <p class="mt-2 text-slate-600">Health, delays, cancellations — 24/7 assistance.</p>
+          <a href="#INSURANCE_LINK" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Get insured</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP TOURS -->
+  <section id="tours" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6 flex-wrap">
+        <h2 class="heading text-3xl sm:text-4xl">Top Tours</h2>
+        <p class="text-sm text-slate-600">Curated highlights</p>
+      </div>
+
+      <!-- Cards with sample images -->
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+          <figure class="relative">
+            <img src="img-tours-gran-aventura.jpg" alt="Gran Aventura speedboat tour at Iguazú" class="w-full h-48 sm:h-56 object-cover" loading="lazy" width="2016" height="864">
+          </figure>
+          <div class="p-6">
+            <h3 class="heading text-xl">Gran Aventura</h3>
+            <p class="mt-2 text-slate-600">4x4 + speedboat • Iconic viewpoints • Mobile ticket</p>
+            <a href="#VIATOR_DEEP_LINK_GRAN_AVENTURA" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Book on Viator</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+          <figure class="relative">
+            <img src="img-tours-moonlight.jpg" alt="Moonlight walk at Iguazú — night access" class="w-full h-48 sm:h-56 object-cover" loading="lazy" width="2016" height="864">
+          </figure>
+          <div class="p-6">
+            <h3 class="heading text-xl">Moonlight Walk</h3>
+            <p class="mt-2 text-slate-600">Limited dates • Night access • Small groups</p>
+            <a href="#VIATOR_DEEP_LINK_MOONLIGHT" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Book on Viator</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+          <figure class="relative">
+            <img src="img-tours-brazilian-side.jpg" alt="Brazilian side panoramic views of Iguazú Falls" class="w-full h-48 sm:h-56 object-cover" loading="lazy" width="2016" height="864">
+          </figure>
+          <div class="p-6">
+            <h3 class="heading text-xl">Brazilian Side</h3>
+            <p class="mt-2 text-slate-600">Panoramic views • Ideal for photos</p>
+            <a href="#VIATOR_DEEP_LINK_BRAZIL_SIDE" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Book on Viator</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Widget placeholder (kept in same order) -->
+      <div class="mt-8 rounded-2xl border-2 border-dashed border-slate-300 p-6 text-slate-600">
+        <p class="heading text-lg">Embed Viator Widget</p>
+        <p class="text-sm mt-2">Viator Partner Portal → Tools → Widgets (English + USD). Copy/paste the HTML here to list more tours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSFERS -->
+  <section id="transfers" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="heading text-3xl sm:text-4xl">Airport Transfers</h2>
+      <p class="mt-3 text-slate-600">IGR ↔ Hotels (Argentina) • IGU ↔ Hotels (Brazil)</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+          <figure>
+            <img src="img-transfers-igr.jpg" alt="Puerto Iguazú (IGR) airport transfer — van to hotel" class="w-full h-48 sm:h-56 object-cover" loading="lazy" width="2016" height="864">
+          </figure>
+          <div class="p-6">
+            <h3 class="heading text-xl">Puerto Iguazú (IGR) ⇄ Hotel</h3>
+            <p class="mt-2 text-slate-600">Round trip • Meet & greet • Flexible times</p>
+            <a href="#VIATOR_DEEP_LINK_TRANSFER_AR" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Book on Viator</a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+          <figure>
+            <img src="img-transfers-igu.jpg" alt="Foz do Iguaçu (IGU) airport transfer — cross-border guidance" class="w-full h-48 sm:h-56 object-cover" loading="lazy" width="2016" height="864">
+          </figure>
+          <div class="p-6">
+            <h3 class="heading text-xl">Foz do Iguaçu (IGU) ⇄ Hotel</h3>
+            <p class="mt-2 text-slate-600">Cross-border guidance • Mobile ticket</p>
+            <a href="#VIATOR_DEEP_LINK_TRANSFER_BR" target="_blank" rel="sponsored noopener noreferrer" class="mt-4 inline-block px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Book on Viator</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Widget placeholder -->
+      <div class="mt-8 rounded-2xl border-2 border-dashed border-slate-300 p-6 text-slate-600">
+        <p class="heading text-lg">Embed Viator Transfers Widget</p>
+        <p class="text-sm mt-2">Paste your Viator HTML widget here to display multiple transfer options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES / TESTIMONIAL STRIP (added above FAQ) -->
+  <section id="stories" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-3xl overflow-hidden">
+        <img src="img-stories-three-friends-iguazu.jpg" alt="Three travelers posing with Iguazú Falls behind them" class="w-full h-[22rem] sm:h-[26rem] md:h-[30rem] object-cover" loading="lazy" width="2016" height="864">
+        <!-- minimal overlay + copy anchored to not block the scene -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto max-w-2xl">
+          <h2 class="heading text-3xl sm:text-4xl text-white text-shadow">They came. They felt. They’ll never forget.</h2>
+          <p class="mt-3 text-white/95 italic text-base sm:text-lg max-w-2xl text-shadow">"I thought I had seen it all… until I stood in front of Iguazu. No photo or video will ever capture that moment. It’s pure magic."</p>
+          <div class="mt-5">
+            <a href="#build" class="inline-block px-6 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Start your own story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="heading text-3xl sm:text-4xl">FAQ</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <details class="rounded-2xl border border-slate-200 p-6 bg-white" open>
+          <summary class="font-semibold cursor-pointer">Where do I pay?</summary>
+          <p class="mt-2 text-sm text-slate-600">Directly on each partner’s website (Viator, eSIM provider, insurer). We’re a curated guide; partners handle payment, tickets, and support.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <summary class="font-semibold cursor-pointer">Can I cancel?</summary>
+          <p class="mt-2 text-sm text-slate-600">Cancellation rules vary by partner and product. Check the policy on the checkout page before you pay.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <summary class="font-semibold cursor-pointer">Is eSIM data-only?</summary>
+          <p class="mt-2 text-sm text-slate-600">Most tourist eSIMs are data-only. Use WhatsApp/VoIP for calls. Check plan details for tethering and speed limits.</p>
+        </details>
+        <details class="rounded-2xl border border-slate-200 p-6 bg-white">
+          <summary class="font-semibold cursor-pointer">Do you support Spanish/ARS?</summary>
+          <p class="mt-2 text-sm text-slate-600">Yes. We can provide a localized version on request.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="heading text-3xl sm:text-4xl">Questions? WhatsApp us</h2>
+      <p class="mt-3 text-slate-600">Tell us your dates & goals — we’ll send a quick, customized plan.</p>
+      <a id="waMain" href="https://wa.me/549XXXXXXXXXX?text=Hi!%20I%20need%20help%20planning%20Iguazu%20(eSIM%2C%20transfers%2C%20tours)." target="_blank" rel="noopener" class="inline-block mt-5 px-6 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700">Message on WhatsApp</a>
+      <p class="mt-4 text-xs text-slate-500">Disclosure: We may earn a commission from partner links. Prices and policies are shown on partners’ checkout pages.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">© <span id="y"></span> Iguazu Falls Adventure. All rights reserved.</p>
+      <a id="waFloat" href="https://wa.me/549XXXXXXXXXX?text=Hi!%20I%20need%20help%20with%20Iguazu%20plans" target="_blank" rel="noopener" class="shadow-lg rounded-full px-5 py-3 bg-emerald-600 text-white font-semibold hover:bg-emerald-700">WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    // Header solid after scroll
+    const siteHeader = document.getElementById('siteHeader');
+    const setHeaderState = () => {
+      if (window.scrollY > 10) {
+        siteHeader.classList.remove('transparent');
+        siteHeader.classList.add('solid');
+        siteHeader.querySelectorAll('a').forEach(a => {
+          a.classList.remove('text-white');
+          a.classList.add('text-slate-900');
+        });
+      } else {
+        siteHeader.classList.add('transparent');
+        siteHeader.classList.remove('solid');
+        siteHeader.querySelectorAll('a').forEach(a => {
+          a.classList.remove('text-slate-900');
+          a.classList.add('text-white');
+        });
+      }
+    };
+    setHeaderState();
+    window.addEventListener('scroll', setHeaderState);
+
+    // Hero carousel logic
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('[data-dot]'));
+    const phrases = [
+      "This isn’t a picture… it’s a dream waiting for you.",
+      "Imagine the mist on your face and the power of nature all around you.",
+      "Iguazu Falls can’t be told… they must be lived. When are you coming?"
+    ];
+    const heroPhrase = document.getElementById('heroPhrase');
+
+    let i = 0, timer;
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      dots.forEach((d, idx) => {
+        d.style.backgroundColor = idx === i ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.4)';
+        d.setAttribute('aria-current', idx === i ? 'true' : 'false');
+      });
+      heroPhrase.textContent = phrases[i];
+    }
+    function next() { show(i + 1); }
+    function autoplay() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      clearInterval(timer); timer = setInterval(next, 6000);
+    }
+    dots.forEach((d, idx) => d.addEventListener('click', () => { show(idx); autoplay(); }));
+    show(0); autoplay();
+
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
